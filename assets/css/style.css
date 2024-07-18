@@ -278,6 +278,7 @@ body {
 }
 
 .hero-photo {
+  position: relative;
   margin-top: 3rem;
 }
 
@@ -296,4 +297,173 @@ body {
 
 .hero-img {
   max-width: 100%;
+}
+
+/*== badge == */
+
+.hero-badge-workout {
+  position: absolute;
+  top: 2.98rem;
+  right: 0.81rem;
+  border-radius: 0.625rem;
+  border-width: 0.05rem;
+  border-style: solid;
+  border-color: rgb(255 255 255 / 0.1);
+  background-color: rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(0.5rem);
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 1.14rem;
+  padding-right: 1.14rem;
+}
+
+@media (min-width: 576px) {
+  .hero-badge-workout {
+    top: 3.69rem;
+    right: -2.19rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-badge-workout {
+    top: 7.81rem;
+    right: -2.62rem;
+  }
+}
+
+@media (min-width: 1170px) {
+  .hero-badge-workout {
+    right: -4.62rem;
+  }
+}
+
+.hero-badge-workout-tittle {
+  margin-bottom: 0.25rem;
+  font-size: 1.875rem;
+  font-weight: 900;
+  line-height: 1.875rem;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 576px) {
+  .hero-badge-workout-tittle {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.hero-badge-workout-desc {
+  font-size: 0.625rem;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.025em;
+  color: rgb(255 255 255 / 0.65);
+}
+
+@media (min-width: 576px) {
+  .hero-badge-workout-desc {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+.hero-badge-tutorial {
+  -webkit-backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.5rem);
+  position: absolute;
+  bottom: 15.25rem;
+  left: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.57rem;
+  border-radius: 0.625rem;
+  border-width: 0.05rem;
+  border-style: solid;
+  border-color: rgb(255 255 255 / 0.1);
+  background-color: rgba(48, 48, 48, 0.54);
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
+  padding-left: 1.09rem;
+  padding-right: 1.09rem;
+}
+
+@media (min-width: 576px) {
+  .hero-badge-tutorial {
+    bottom: 8.19rem;
+    left: -3.12rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.44rem;
+    padding-right: 1.44rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-badge-tutorial {
+    bottom: 3.94rem;
+    left: -7.06rem;
+    gap: 0.75rem;
+  }
+}
+
+.hero-badge-tutorial-tittle {
+  margin-bottom: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 900;
+  line-height: 1.125rem;
+  letter-spacing: 0.025em;
+}
+
+@media (min-width: 576px) {
+  .hero-badge-tutorial-tittle {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+.hero-badge-tutorial-desc {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: 0.025em;
+  color: rgb(255 255 255 / 0.65);
+}
+
+@media (min-width: 576px) {
+  .hero-badge-tutorial-desc {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+}
+
+.hero-badge-tutorial-circle {
+  display: flex;
+  width: 1.875rem;
+  height: 1.875rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--mandarin-red);
+}
+
+@media (min-width: 576px) {
+  .hero-badge-tutorial-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.play-icon {
+  font-size: 0.85rem;
+}
+
+@media (min-width: 576px) {
+  .play-icon {
+    font-size: 1.125rem;
+  }
 }
