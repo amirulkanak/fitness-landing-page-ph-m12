@@ -13,6 +13,7 @@
   --white-65: rgba(255, 255, 255, 0.65);
   --black: #000;
   --mandarin-red: #e6533c;
+  --black-out: #222222;
 }
 
 *,
@@ -68,6 +69,7 @@ body {
   padding-right: 1.125rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-align: center;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.375rem;
@@ -94,6 +96,7 @@ body {
   padding-right: 1.125rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-align: center;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.375rem;
@@ -300,6 +303,7 @@ body {
 }
 
 .hero-img {
+  height: auto;
   max-width: 100%;
 }
 
@@ -549,6 +553,7 @@ body {
 }
 
 .habit-workout-card-img {
+  height: auto;
   max-width: 100%;
   border-radius: 100%;
 }
@@ -573,4 +578,138 @@ body {
   font-weight: 400;
   line-height: 1rem;
   color: var(--white-50);
+}
+
+/* === Run Section === */
+
+.run {
+  margin-top: 4.12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.94rem;
+  border-radius: 1.125rem;
+  background-color: var(--black-out);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.94rem;
+  padding-bottom: 1.94rem;
+}
+
+@media (min-width: 576px) {
+  .run {
+    margin-top: 5.25rem;
+  }
+}
+
+@media (min-width: 655px) {
+  .run {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .run {
+    margin-top: 6.25rem;
+  }
+}
+
+.run-content {
+  display: flex;
+  max-width: 27.6875rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.run-tittle {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.4rem;
+}
+
+@media (min-width: 576px) {
+  .run-tittle {
+    font-size: 2.25rem;
+    line-height: 2.7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .run-tittle {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+}
+
+.run-description {
+  margin-top: 0.88rem;
+  text-wrap: pretty;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--white-50);
+}
+
+.run-btn {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .run-btn {
+    margin-top: 2.12rem;
+  }
+}
+
+@media (min-width: 655px) {
+  .run-btn {
+    max-width: 14rem;
+  }
+}
+
+.run-content-img {
+  height: 10.625rem;
+  max-width: 27.6875rem;
+  overflow: clip;
+  border-radius: 1.125rem;
+}
+
+@media (min-width: 655px) {
+  .run-content-img {
+    height: 19.9375rem;
+    max-width: 16rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .run-content-img {
+    height: 19.5rem;
+    max-width: 22.875rem;
+  }
+}
+
+.run-img {
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1.125rem;
+  object-fit: cover;
+}
+
+@media (min-width: 655px) {
+  .run-img {
+    top: 9rem;
+    right: 7rem;
+    transform: scale(3.3, 3.3);
+  }
+}
+
+@media (min-width: 992px) {
+  .run-img {
+    top: 8.2rem;
+    right: 9.5rem;
+  }
 }
