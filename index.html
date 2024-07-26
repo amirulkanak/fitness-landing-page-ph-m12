@@ -24,7 +24,7 @@
 
     <!-- =======================================================
     * Name: Fitness Landing Page
-    * Updated: July 25 2024
+    * Updated: July 27 2024
     * Developer: Amirul Alam Kanak
     * Github: github.com/amirulkanak
     * Credits: Programming Hero module-12 (assignment-2) web.programming-hero.com
@@ -71,9 +71,12 @@
             A huge selection of health and fitness content, healthy recipes and
             transformation stories to help you get fit and stay fit!
           </p>
+          <!-- button -->
           <div class="btn-groups">
-            <a class="btn-red" href="#about">Join Now! </a>
-            <a class="btn-black" href="#about">Download App</a>
+            <a class="btn-red" href="#joinNow"
+              >Join <span class="btn-red-club">Club</span> Now!</a
+            >
+            <a class="btn-black" href="#app">Download App</a>
           </div>
         </div>
         <div class="hero-photo">
@@ -82,12 +85,13 @@
             src="./assets/images/hero-img.png"
             alt="Fitness" />
 
-          <!-- badge -->
+          <!-- badge 1 -->
           <div class="hero-badge-workout">
             <h3 class="hero-badge-workout-tittle">500+</h3>
             <p class="hero-badge-workout-desc">Free Workout Videos</p>
           </div>
 
+          <!-- badge 2 -->
           <div class="hero-badge-tutorial">
             <div class="hero-badge-tutorial-circle">
               <i class="fa-solid fa-play play-icon"></i>
@@ -193,6 +197,103 @@
         </div>
       </section>
       <!-- Run end -->
+
+      <!-- BMI Section -->
+      <section class="box">
+        <div class="bmi">
+          <h2 class="bmi-tittle">BMI Calculator</h2>
+          <p class="bmi-description">
+            The Body Mass Index is a measure of body fat based on an
+            individual's weight and height. It is commonly used to classify
+            whether a person is underweight, normal weight, overweight, or
+            obese.
+          </p>
+        </div>
+      </section>
+
+      <section class="bmi-chart-calc-bg">
+        <div class="bmi-chart-calc box">
+          <!-- Bmi chart -->
+          <div class="bmi-chart">
+            <h2 class="bmi-chart-tittle">BMI Calculator Chart</h2>
+            <!-- bmi chart table -->
+            <table class="bmi-table">
+              <tr>
+                <th class="bmi-table-head">BMI</th>
+                <th class="bmi-table-head">Weight Status</th>
+              </tr>
+              <tr>
+                <td class="bmi-table-data">Below 18.5</td>
+                <td class="bmi-table-data">Underweight</td>
+              </tr>
+              <tr>
+                <td class="bmi-table-data">18.5 - 24.9</td>
+                <td class="bmi-table-data">Healthy</td>
+              </tr>
+              <tr>
+                <td class="bmi-table-data">25.0 - 29.9</td>
+                <td class="bmi-table-data">Overweight</td>
+              </tr>
+              <tr>
+                <td class="bmi-table-data">30.0 - and Above</td>
+                <td class="bmi-table-data">Obese</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- calculator form -->
+          <div class="bmi-calc">
+            <div class="bmi-calc-details">
+              <h2 class="bmi-calc-tittle">Calculate your BMI</h2>
+              <p class="bmi-calc-description">
+                Fill up the form below to calculate your body mass index
+              </p>
+            </div>
+            <!-- form -->
+            <form class="bmi-calc-form">
+              <div class="bmi-calc-form-group">
+                <input
+                  class="bmi-calc-form-input"
+                  type="number"
+                  id="height"
+                  placeholder="Height/cm"
+                  required />
+                <input
+                  class="bmi-calc-form-input"
+                  type="number"
+                  id="weight"
+                  placeholder="Weight/kg"
+                  required />
+              </div>
+              <div class="bmi-calc-form-group">
+                <input
+                  class="bmi-calc-form-input"
+                  type="number"
+                  id="age"
+                  placeholder="Age"
+                  required />
+                <!-- gender selection -->
+                <select
+                  class="bmi-calc-form-input select-input"
+                  id="gender"
+                  required>
+                  <option selected>Sex</option>
+                </select>
+              </div>
+              <select
+                class="bmi-calc-form-input select-input"
+                id="activity-factor"
+                required>
+                <option selected>Select an activity factor</option>
+              </select>
+            </form>
+            <button class="bmi-calc-form-btn btn-red" type="submit">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- BMI end -->
 
       <!-- Team Section -->
       <section class="box">

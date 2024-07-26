@@ -9,7 +9,9 @@
   --font-miama: 'Miama', sans-serif;
   /* color variables */
   --white: #fff;
+  --white-10: rgba(255, 255, 255, 0.1);
   --white-50: rgba(255, 255, 255, 0.5);
+  --white-60: rgba(255, 255, 255, 0.6);
   --white-65: rgba(255, 255, 255, 0.65);
   --black: #000;
   --mandarin-red: #e6533c;
@@ -32,6 +34,27 @@ a {
 ol,
 ul {
   list-style: none;
+}
+
+input::-moz-placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: none;
+}
+
+input,
+button,
+select,
+input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: none;
 }
 
 body {
@@ -65,8 +88,8 @@ body {
 .btn-red {
   border-radius: 2.625rem;
   background-color: var(--mandarin-red);
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
@@ -78,8 +101,6 @@ body {
 
 @media (min-width: 576px) {
   .btn-red {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 1.25rem;
@@ -154,7 +175,7 @@ body {
   border-radius: 2.4375rem;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(255 255 255 / 0.1);
+  border-color: var(--white-10);
   padding: 0.25rem;
 }
 
@@ -279,9 +300,18 @@ body {
 
 .btn-groups {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.88rem;
+}
+
+.btn-red-club {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .btn-red-club {
+    display: inline;
+  }
 }
 
 .hero-photo {
@@ -316,8 +346,8 @@ body {
   border-radius: 0.625rem;
   border-width: 0.05rem;
   border-style: solid;
-  border-color: rgb(255 255 255 / 0.1);
-  background-color: rgb(255 255 255 / 0.1);
+  border-color: var(--white-10);
+  background-color: var(--white-10);
   backdrop-filter: blur(0.5rem);
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
@@ -391,7 +421,7 @@ body {
   border-radius: 0.625rem;
   border-width: 0.05rem;
   border-style: solid;
-  border-color: rgb(255 255 255 / 0.1);
+  border-color: var(--white-10);
   background-color: rgba(48, 48, 48, 0.54);
   padding-top: 0.95rem;
   padding-bottom: 0.95rem;
@@ -768,7 +798,7 @@ body {
   justify-content: center;
   gap: 1.25rem;
   border-radius: 1.125rem;
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: var(--white-10);
   padding: 1.25rem;
 }
 
@@ -840,4 +870,227 @@ body {
   font-weight: 400;
   line-height: 1.05rem;
   color: var(--white-50);
+}
+
+/* === Bmi Section === */
+
+.bmi {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.2rem;
+  max-width: 41.9375rem;
+}
+
+@media (min-width: 576px) {
+  .bmi {
+    margin-top: 3.87rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bmi {
+    margin-top: 5.5rem;
+  }
+}
+
+.bmi-tittle {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.4rem;
+}
+
+@media (min-width: 576px) {
+  .bmi-tittle {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+}
+
+.bmi-description {
+  margin-top: 0.88rem;
+  text-wrap: pretty;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--white-50);
+}
+
+.bmi-chart-calc-bg {
+  margin-top: 2rem;
+  background-color: var(--black-out);
+}
+
+@media (min-width: 576px) {
+  .bmi-chart-calc-bg {
+    margin-top: 2.87rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bmi-chart-calc-bg {
+    margin-top: 5.5rem;
+  }
+}
+
+.bmi-chart-calc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 2.61rem;
+  padding-top: 2.38rem;
+  padding-bottom: 2.38rem;
+}
+
+@media (min-width: 576px) {
+  .bmi-chart-calc {
+    row-gap: 3.88rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bmi-chart-calc {
+    flex-direction: row;
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+}
+
+.bmi-chart-tittle {
+  margin-bottom: 1.44rem;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .bmi-chart-tittle {
+    margin-bottom: 2.87rem;
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .bmi-chart-tittle {
+    margin-bottom: 3.25rem;
+  }
+}
+
+/* == bmi table == */
+
+.bmi-table,
+.bmi-table-data,
+.bmi-table-head {
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--white-10);
+}
+
+.bmi-table-head,
+.bmi-table-data {
+  padding-left: 1.44rem;
+  padding-right: 1.44rem;
+  padding-top: 0.94rem;
+  padding-bottom: 0.94rem;
+  text-align: left;
+}
+
+.bmi-table-head {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+
+.bmi-table-data {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.05rem;
+  color: var(--white-50);
+}
+
+/* == calculator form == */
+
+.bmi-calc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.12rem;
+}
+
+@media (min-width: 992px) {
+  .bmi-calc {
+    max-width: 36.125rem;
+  }
+}
+
+.bmi-calc-tittle {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  .bmi-calc-tittle {
+    font-size: 1.75rem;
+    line-height: 2.1rem;
+  }
+}
+
+.bmi-calc-description {
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--white-50);
+}
+
+/* == form == */
+
+.bmi-calc-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bmi-calc-form-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.bmi-calc-form-input {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 0%;
+  border-radius: 0.5rem;
+  border-style: none;
+  background-color: var(--white-10);
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: var(--white-60);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.select-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cg opacity='0.5'%3E%3Cpath d='M6 9L12 15L18 9' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 1.5rem auto;
+  background-position: right 1.25rem top 50%;
+  background-repeat: no-repeat;
+}
+
+.bmi-calc-form-btn {
+  width: 100%;
+  max-width: 14rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
