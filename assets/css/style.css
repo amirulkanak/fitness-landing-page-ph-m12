@@ -13,6 +13,7 @@
   --white-50: rgba(255, 255, 255, 0.5);
   --white-60: rgba(255, 255, 255, 0.6);
   --white-65: rgba(255, 255, 255, 0.65);
+  --white-80: rgba(255, 255, 255, 0.8);
   --black: #000;
   --mandarin-red: #e6533c;
   --black-out: #222222;
@@ -735,6 +736,153 @@ body {
   }
 }
 
+/* === Testimonial Section === */
+
+.testimonial {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 576px) {
+  .testimonial {
+    margin-top: 4.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial {
+    margin-top: 5.5rem;
+  }
+}
+
+.testimonial-tittle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.4rem;
+}
+
+@media (min-width: 576px) {
+  .testimonial-tittle {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+}
+
+.testimonial-description {
+  margin-top: 0.88rem;
+  max-width: 41.9375rem;
+  text-wrap: pretty;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--white-50);
+}
+
+.testimonial-cards {
+  margin-top: 3.62rem;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, minmax(0, auto));
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+
+@media (min-width: 576px) {
+  .testimonial-cards {
+    grid-template-columns: repeat(2, minmax(0, auto));
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonial-cards {
+    grid-template-columns: repeat(4, minmax(0, auto));
+  }
+}
+
+.testimonial-card {
+  display: flex;
+  min-height: 32rem;
+  max-width: 17.6875rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (min-width: 992px) {
+  .testimonial-card {
+    max-width: 16.5rem;
+  }
+}
+
+.testimonial-card-content {
+  position: relative;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0.03%,
+    #000 99.97%
+  );
+}
+
+.testimonial-card-img {
+  position: relative;
+  z-index: -1;
+  height: auto;
+  min-height: 25rem;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonial-card-details {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.25rem;
+}
+
+.testimonial-card-name {
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: var(--white-80);
+}
+
+.rating-stars {
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--mandarin-red);
+}
+
+.testimonial-card-content-bottom {
+  display: flex;
+  min-height: 7rem;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.testimonial-card-quote-left {
+  font-size: 1.5rem;
+  color: var(--white-80);
+}
+
+.testimonial-card-desc {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--white-80);
+}
+
 /* === Team Section === */
 
 .team {
@@ -1080,6 +1228,7 @@ body {
 .bmi-calc-form-btn {
   width: 100%;
   max-width: 14rem;
+  cursor: pointer;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 1rem;
